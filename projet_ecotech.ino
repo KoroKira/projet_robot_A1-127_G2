@@ -1,4 +1,5 @@
 //code du groupe 2 pour le projet ecotech
+//Mettez des commentaires bande de sacripans, c'est important pour que les gens qui repassent sur le code comprennent les changements faits et puissent être efficace après <3
 //Contributeurs: Guilhem Desarcy-Lemiere, Thomas Del Gatto, Luca Desplat, Kiara Vachet, Charlyne Bary (cablage essentiellement mais c'est déjà ça), Luca Fraissine et Méline Torrent
 
 //Définition des broches pour les moteurs (moteur1 gauche moteur2 droite)
@@ -41,6 +42,7 @@ int relai = 0;
 // Déclaration de la variable avant la fonction loop()
 
 // Déclarations de fonctions
+// Cette étape est indispensable afin que le robot puisse fonctionner. Il faut définir l'ensemble des fonctions qui seront utilisées
 void avancer_droite();
 void avancer_gauche();
 void avancer();
@@ -48,6 +50,8 @@ void stopper();
 void continuer();
 void bascule();
 void escalier();
+void mousse();
+void guillotine();
 // void codeur_incremental_IR();
 
 // Définitions de fonctions
@@ -120,14 +124,17 @@ void escalier() {
   // RELANCER VOID AVANCER
 }
 
+void mousse() {
+  // Instructions pour passer la mousse
+  // A AJOUTER
+}
 
 
-// void codeur_incremental_IR() {
-  // Instructions pour calculer la distance parcourue
-  // int valeur = analogRead(capteur); // Lit la valeur du capteur
-  // distance = valeur * 0.0175; // Convertit la valeur en distance
-  // Serial.println(distance); // Affiche la distance parcourue sur le port série
-// }
+void guillotine() {
+  // Instructions pour passer la guillotine
+  // A AJOUTER
+}
+
 
 void setup()
 {
@@ -148,9 +155,12 @@ void loop()
 {
 
   // Lecture des capteurs infrarouges
-  int infrarouge_gauche = digitalRead(capteur_gauche);
-  int infrarouge_droit = digitalRead(capteur_droit);
+  //int infrarouge_gauche = digitalRead(capteur_gauche);
+  //int infrarouge_droit = digitalRead(capteur_droit);
+  
+  // Pourquoi le bout de code juste au dessus est en commentaire ? C'est simple: je pense pas qu'il serve mais au cas où on le garde sous le coude
 
+  
   // Lecture du capteur de couleur
   int couleur = digitalRead(capteur_couleur);
   // Lecture de la valeur du capteur infrarouge gauche puis droit
@@ -184,9 +194,28 @@ else {
     avancer();
   }
 
-  // Détection d'obstacle
+  // Détection d'obstacle. Il faudra ici changer les valeurs détectées dans couleur. En gros, le ==1 signifie que il faut que la variable couleur soit égale a la variable définie dans 1, donc ici il faudra définir 1 par le code rgb associé
+  
   if (couleur == 1) {
-    stopper();
+    balance();
+  } else {
+    continuer();
+  }
+  
+  if (couleur == 2) {
+    bascule();
+  } else {
+    continuer();
+  }
+  
+  if (couleur == 3) {
+    mousse();
+  } else {
+    continuer();
+  }
+  
+  if (couleur == 4) {
+    guillotine();
   } else {
     continuer();
   }
