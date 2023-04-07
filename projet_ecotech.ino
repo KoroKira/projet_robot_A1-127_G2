@@ -1,9 +1,10 @@
-//code du groupe 2 pour le projet ecotech 
+//code du groupe 2 pour le projet ecotech
+//Contributeurs: Guilhem Desarcy-Lemiere, Thomas Del Gatto, Luca Desplat, Kiara Vachet, Charlyne Bary (cablage essentiellement mais c'est déjà ça), Luca Fraissine et Méline Torrent
 
 //Définition des broches pour les moteurs (moteur1 gauche moteur2 droite)
 // Vitesse PWM en ANALOG, de 0 à 255
-int moteur1 = A9;
-int moteur2 = A10;
+int moteur1 = 12;
+int moteur2 = 13;
 
 // Sens de rotation. IN1 et IN2 moteur gauche, IN3 et IN4 droite. Si IN1 HIGH IN2 LOW, Sens horaire. Si IN1 LOW IN2 HIGH, Sens antihoraire. Si IN3 HIGH IN4 LOW, Sens horaire. Si IN3 LOW IN4 HIGH, Sens antihoraire
 int IN1 = 4;
