@@ -6,3 +6,6 @@ Les dinosaures sont morts parce qu'ils se sont pas adaptés assez vite à la mé
 Ce qu'on va faire, c'est donc préparer le code par rapport à l'installation du bouton d'arret d'urgence et du bouton d'initialisation, ainsi que la présence de 4 leds. 
 La présence de leds est pour signaler si le robot est sous tension. On en mettra 2 à cette tâche, par esthétisme, et pour faire des "phares" de voiture a notre char d'assaut qu'est le robot.
 La deuxième paire de leds sera pour signaler la mise en marche du programme. Si on se chauffe on pourrait faire une petite loop dans les programmes pour que en fonction des directions prises (tourner à gauche/droite etc...) le pattern de led change, qu'il ne reste pas statique, mais ça serait juste pour flex.
+
+
+Update du 17 avril: On va tester le code, et surtout implémenter les boutons ainsi que le relai au circuit. Ca va être fastidieux
