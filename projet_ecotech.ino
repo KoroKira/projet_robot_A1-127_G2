@@ -186,9 +186,9 @@ else {
 
 
   // Suivi de ligne
-  if (infrarouge_gauche == 1 && infrarouge_droit == 0) {
+  if (valeur_capteur_gauche == 1 && valeur_capteur_droit == 0) {
     avancer_droite();
-  } else if (infrarouge_gauche == 0 && infrarouge_droit == 1) {
+  } else if (valeur_capteur_gauche == 0 && valeur_capteur_droit == 1) {
     avancer_gauche();
   } else {
     avancer();
