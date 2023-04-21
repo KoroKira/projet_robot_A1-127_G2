@@ -37,4 +37,4 @@ void loop() {
 // Connectez le fil rouge (VCC) du capteur de couleur au port 5V de la carte Uno R3.
 // Connectez le fil noir (GND) du capteur de couleur au port GND de la carte Uno R3.
 // Connectez le fil blanc (SCL) du capteur de couleur au port SCL (A5) de la carte Uno R3.
-Connectez le fil jaune (SDA) du capteur de couleur au port SDA (A4) de la carte Uno R3.
+// Connectez le fil jaune (SDA) du capteur de couleur au port SDA (A4) de la carte Uno R3.
