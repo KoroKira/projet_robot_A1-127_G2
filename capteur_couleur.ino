@@ -34,6 +34,8 @@ void loop() {
   delay(1000);
 }
 
+
+// Cablage en dessous + Il faut installer la librairie Adafruit_Sensor pour que le programme fonctionne
 // Connectez le fil rouge (VCC) du capteur de couleur au port 5V de la carte Uno R3.
 // Connectez le fil noir (GND) du capteur de couleur au port GND de la carte Uno R3.
 // Connectez le fil blanc (SCL) du capteur de couleur au port SCL (A5) de la carte Uno R3.
