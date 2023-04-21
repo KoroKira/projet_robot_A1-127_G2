@@ -18,3 +18,9 @@ void loop() {
     Serial.println("LIGNE NOIRE DETECTEE A DROITE");
   }
 }
+
+// CABLAGE
+// Connectez le fil noir du capteur infrarouge gauche à la broche GND de la carte Uno R3.
+// Connectez le fil rouge du capteur infrarouge gauche à la broche A0 de la carte Uno R3.
+// Connectez le fil noir du capteur infrarouge droit à la broche GND de la carte Uno R3.
+// Connectez le fil rouge du capteur infrarouge droit à la broche A1 de la carte Uno R3
