@@ -9,3 +9,6 @@ La deuxième paire de leds sera pour signaler la mise en marche du programme. Si
 
 
 Update du 17 avril: On va tester le code, et surtout implémenter les boutons ainsi que le relai au circuit. Ca va être fastidieux
+
+
+21 Avril: notre Mega 2560 est dead, on va devoir passer sur la Uno R3. De gros changements dans le code sont prévus
