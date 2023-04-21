@@ -10,14 +10,24 @@ void loop() {
   int valeurGauche = analogRead(capteurGauche); // lecture de la valeur du capteur gauche
   int valeurDroit = analogRead(capteurDroit); // lecture de la valeur du capteur droit
 
-  // si la valeur est inférieure au seuil, alors la ligne noire est détectée
-  if (valeurGauche < seuil) {
-    Serial.println("LIGNE NOIRE DETECTEE A GAUCHE");
+  // Si les deux capteurs infrarouges détectent une ligne noire
+  if (valeurGauche < seuil && valeurDroit < seuil) {
+    Serial.println("DETECTION DE LIGNE NOIRE A GAUCHE ET A DROITE");
   }
-  if (valeurDroit < seuil) {
-    Serial.println("LIGNE NOIRE DETECTEE A DROITE");
+  // Si seul le capteur infrarouge gauche détecte une ligne noire
+  else if (valeurGauche < seuil) {
+    Serial.println("DETECTION DE LIGNE NOIRE A GAUCHE");
+  }
+  // Si seul le capteur infrarouge droit détecte une ligne noire
+  else if (valeurDroit < seuil) {
+    Serial.println("DETECTION DE LIGNE NOIRE A DROITE");
+  }
+  // Si aucun des capteurs infrarouges ne détecte une ligne noire
+  else {
+    Serial.println("AUCUNE DETECTION DE LIGNE NOIRE");
   }
 }
+
 
 // CABLAGE
 // Connectez le fil noir du capteur infrarouge gauche à la broche GND de la carte Uno R3.
