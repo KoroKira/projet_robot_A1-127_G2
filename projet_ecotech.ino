@@ -3,7 +3,7 @@
 //Contributeurs: Guilhem Desarcy-Lemiere, Thomas Del Gatto, Luca Desplat, Kiara Vachet, Charlyne Bary (cablage essentiellement mais c'est déjà ça), Luca Fraissine et Méline Torrent
 
 //Définition des broches pour les moteurs (moteur1 gauche moteur2 droite)
-// Vitesse PWM en ANALOG, de 0 à 255
+// Vitesse PWM en Digital, de 0 à 255
 int moteur1 = 12;
 int moteur2 = 13;
 
@@ -21,24 +21,17 @@ int capteur_droit = A1;
 
 //Définition des broches pour les capteurs de couleur
 // regarder https://learn.adafruit.com/adafruit-color-sensors/library-reference pour le capteur
-int capteur_couleur = 7;
+// A FAIRE
 
-//Définition des couleurs à détecter
-int couleur_rouge = 0;
-int couleur_vert = 0;
-int couleur_bleu = 0;
 
 //Définition bouton marche
 int button_marche = 0;
-
 //Définition bouton ARU
 int button_ARU = 0;
-
 //Définition Relai
 int relai = 0;
 
 
-// int valeur_capteur_gauche = 0; 
 // Déclaration de la variable avant la fonction loop()
 
 // Déclarations de fonctions
@@ -52,7 +45,6 @@ void bascule();
 void escalier();
 void mousse();
 void guillotine();
-// void codeur_incremental_IR();
 
 // Définitions de fonctions
 void avancer_droite() {
@@ -152,17 +144,9 @@ void setup()
 }
 
 void loop()
-{
-
-  // Lecture des capteurs infrarouges
-  //int infrarouge_gauche = digitalRead(capteur_gauche);
-  //int infrarouge_droit = digitalRead(capteur_droit);
-  
-  // Pourquoi le bout de code juste au dessus est en commentaire ? C'est simple: je pense pas qu'il serve mais au cas où on le garde sous le coude
-
-  
+{  
   // Lecture du capteur de couleur
-  int couleur = digitalRead(capteur_couleur);
+  // A FAIRE
   // Lecture de la valeur du capteur infrarouge gauche puis droit
   int valeur_capteur_gauche = analogRead(A0);
   int valeur_capteur_droit = analogRead(A1);
@@ -184,15 +168,6 @@ else {
     stopper();
 }
 
-
-  // Suivi de ligne
-  if (valeur_capteur_gauche == 1 && valeur_capteur_droit == 0) {
-    avancer_droite();
-  } else if (valeur_capteur_gauche == 0 && valeur_capteur_droit == 1) {
-    avancer_gauche();
-  } else {
-    avancer();
-  }
 
   // Détection d'obstacle. Il faudra ici changer les valeurs détectées dans couleur. En gros, le ==1 signifie que il faut que la variable couleur soit égale a la variable définie dans 1, donc ici il faudra définir 1 par le code rgb associé
   
