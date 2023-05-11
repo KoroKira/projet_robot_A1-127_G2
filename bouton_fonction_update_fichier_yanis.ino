@@ -3,6 +3,7 @@ const int stopPin = 12;
 const int emergencyPin = A0;
 int ledState = LOW;
 int stopState = HIGH;
+int n = 0;
 
 void setup() {
   pinMode(ledPin, OUTPUT);
@@ -14,11 +15,17 @@ void setup() {
 
 void loop() {
   stopState = digitalRead(stopPin);
+  
   if (stopState == LOW) {
-    digitalWrite(ledPin, LOW);
-  } else {
-    digitalWrite(ledPin, HIGH);
+    n = n + 1;  // Incrémente la valeur de n si le bouton est cliqué
+    delay(200); // Délai pour éviter les rebonds du bouton
   }
-Serial.println(digitalRead(stopPin));
 
+  if (n % 2 == 1) { // Si n est impair, allume la lampe
+    digitalWrite(ledPin, HIGH);
+  } else { // Si n est pair, éteint la lampe
+    digitalWrite(ledPin, LOW);
+  }
+
+  Serial.println(digitalRead(stopPin));
 }
