@@ -21,6 +21,18 @@ Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_700MS, TCS347
 
 void setup() {
   Serial.begin(9600); // initialisation de la communication série à 9600 bauds
+  if (tcs.begin()) {
+    Serial.println("TCS34725 sensor initialized");
+  } else {
+    Serial.println("Error initializing TCS34725 sensor");
+  }
+    // Initialisation des broches en entrée ou sortie
+  pinMode(buttonPin, INPUT);
+  pinMode(motor1Pin1, OUTPUT);
+  pinMode(motor1Pin2, OUTPUT);
+  pinMode(motor2Pin1, OUTPUT);
+  pinMode(motor2Pin2, OUTPUT);
+}
 }
 
 void loop() {
@@ -45,15 +57,6 @@ void loop() {
   }
 }
 
-void setup() {
-  Serial.begin(9600);
-  if (tcs.begin()) {
-    Serial.println("TCS34725 sensor initialized");
-  } else {
-    Serial.println("Error initializing TCS34725 sensor");
-  }
-}
-
 void loop() {
   uint16_t clear, red, green, blue;
   tcs.getRawData(&red, &green, &blue, &clear);
@@ -74,16 +77,6 @@ void loop() {
     Serial.println("unknown");
   }
   delay(1000);
-}
-
-
-void setup() {
-  // Initialisation des broches en entrée ou sortie
-  pinMode(buttonPin, INPUT);
-  pinMode(motor1Pin1, OUTPUT);
-  pinMode(motor1Pin2, OUTPUT);
-  pinMode(motor2Pin1, OUTPUT);
-  pinMode(motor2Pin2, OUTPUT);
 }
 
 void loop() {
