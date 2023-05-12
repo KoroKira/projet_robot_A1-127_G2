@@ -45,13 +45,6 @@ void loop() {
   }
 }
 
-
-// CABLAGE
-// Connectez le fil noir du capteur infrarouge gauche à la broche GND de la carte Uno R3.
-// Connectez le fil rouge du capteur infrarouge gauche à la broche A0 de la carte Uno R3.
-// Connectez le fil noir du capteur infrarouge droit à la broche GND de la carte Uno R3.
-// Connectez le fil rouge du capteur infrarouge droit à la broche A1 de la carte Uno R3
-
 void setup() {
   Serial.begin(9600);
   if (tcs.begin()) {
@@ -82,21 +75,6 @@ void loop() {
   }
   delay(1000);
 }
-
-
-// Cablage en dessous + Il faut installer la librairie Adafruit_Sensor pour que le programme fonctionne
-// Connectez le fil rouge (VCC) du capteur de couleur au port 5V de la carte Uno R3.
-// Connectez le fil noir (GND) du capteur de couleur au port GND de la carte Uno R3.
-// Connectez le fil blanc (SCL) du capteur de couleur au port SCL (A5) de la carte Uno R3.
-// Connectez le fil jaune (SDA) du capteur de couleur au port SDA (A4) de la carte Uno R3.
-
-
-// NOTICE DE CABLAGE :
-// -------------------
-// Broche 2 du bouton poussoir connectée à la broche 2 (INT0) de la carte Arduino Uno
-// Broches IN1 et IN2 du pont en H connectées aux broches 3 et 4 de la carte pour le moteur 1
-// Broches IN3 et IN4 du pont en H connectées aux broches 5 et 6 de la carte pour le moteur 2
-// Broches ENA et ENB du pont en H connectées à des broches PWM de la carte (ex: 9 et 10) pour contrôler la vitesse des moteurs
 
 
 void setup() {
@@ -146,3 +124,22 @@ void loop() {
   analogWrite(motor1Pin2, motor1Speed);
   analogWrite(motor2Pin1, motor2Speed);
   analogWrite(motor2Pin2, motor2Speed);
+
+  
+  
+  // CABLAGE + Il faut installer la librairie Adafruit_Sensor pour que le programme fonctionne
+// Connectez le fil noir du capteur infrarouge gauche à la broche GND de la carte Uno R3.
+// Connectez le fil rouge du capteur infrarouge gauche à la broche A0 de la carte Uno R3.
+// Connectez le fil noir du capteur infrarouge droit à la broche GND de la carte Uno R3.
+// Connectez le fil rouge du capteur infrarouge droit à la broche A1 de la carte Uno R3.
+  
+  
+// Connectez le fil rouge (VCC) du capteur de couleur au port 5V de la carte Uno R3.
+// Connectez le fil noir (GND) du capteur de couleur au port GND de la carte Uno R3.
+// Connectez le fil blanc (SCL) du capteur de couleur au port SCL (A5) de la carte Uno R3.
+// Connectez le fil jaune (SDA) du capteur de couleur au port SDA (A4) de la carte Uno R3.
+
+// Broche 2 du bouton poussoir connectée à la broche 2 (INT0) de la carte Arduino Uno
+// Broches IN1 et IN2 du pont en H connectées aux broches 3 et 4 de la carte pour le moteur 1
+// Broches IN3 et IN4 du pont en H connectées aux broches 5 et 6 de la carte pour le moteur 2
+// Broches ENA et ENB du pont en H connectées à des broches PWM de la carte (ex: 9 et 10) pour contrôler la vitesse des moteurs
