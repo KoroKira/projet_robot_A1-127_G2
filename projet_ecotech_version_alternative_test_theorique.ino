@@ -55,9 +55,7 @@ void loop() {
   else {
     Serial.println("AUCUNE DETECTION DE LIGNE NOIRE");
   }
-}
-
-void loop() {
+  
   uint16_t clear, red, green, blue;
   tcs.getRawData(&red, &green, &blue, &clear);
   float r, g, b;
@@ -77,10 +75,8 @@ void loop() {
     Serial.println("unknown");
   }
   delay(1000);
-}
-
-void loop() {
-  // Lecture de l'état du bouton poussoir
+  
+   // Lecture de l'état du bouton poussoir
   buttonState = digitalRead(buttonPin);
 
   // Si le bouton a été pressé, on change l'état des moteurs
@@ -110,7 +106,7 @@ void loop() {
     digitalWrite(motor1Pin2, LOW);
     digitalWrite(motor2Pin1, LOW);    // Moteur 2 arrêté
     digitalWrite(motor2Pin2, LOW);
-  }
+}
 
   // Contrôle des vitesses des moteurs
   analogWrite(motor1Pin1, motor1Speed);
