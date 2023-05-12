@@ -2,6 +2,18 @@ int capteurGauche = A0; // capteur infrarouge gauche connecté à A0
 int capteurDroit = A1; // capteur infrarouge droit connecté à A1
 int seuil = 500; // seuil de détection de la ligne noire
 
+
+const int buttonPin = 2;    // Broche du bouton poussoir
+const int motor1Pin1 = 3;   // Broche 1 pour le moteur 1
+const int motor1Pin2 = 4;   // Broche 2 pour le moteur 1
+const int motor2Pin1 = 5;   // Broche 1 pour le moteur 2
+const int motor2Pin2 = 6;   // Broche 2 pour le moteur 2
+
+int motor1Speed = 0;        // Vitesse initiale pour le moteur 1
+int motor2Speed = 0;        // Vitesse initiale pour le moteur 2
+int buttonState = 0;        // Etat actuel du bouton poussoir
+int buttonPressed = 0;      // Indique si le bouton a été pressé
+
 #include <Wire.h>
 #include <Adafruit_TCS34725.h>
 
@@ -86,17 +98,6 @@ void loop() {
 // Broches IN3 et IN4 du pont en H connectées aux broches 5 et 6 de la carte pour le moteur 2
 // Broches ENA et ENB du pont en H connectées à des broches PWM de la carte (ex: 9 et 10) pour contrôler la vitesse des moteurs
 
-
-const int buttonPin = 2;    // Broche du bouton poussoir
-const int motor1Pin1 = 3;   // Broche 1 pour le moteur 1
-const int motor1Pin2 = 4;   // Broche 2 pour le moteur 1
-const int motor2Pin1 = 5;   // Broche 1 pour le moteur 2
-const int motor2Pin2 = 6;   // Broche 2 pour le moteur 2
-
-int motor1Speed = 0;        // Vitesse initiale pour le moteur 1
-int motor2Speed = 0;        // Vitesse initiale pour le moteur 2
-int buttonState = 0;        // Etat actuel du bouton poussoir
-int buttonPressed = 0;      // Indique si le bouton a été pressé
 
 void setup() {
   // Initialisation des broches en entrée ou sortie
