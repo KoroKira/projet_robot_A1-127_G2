@@ -3,15 +3,15 @@
 //Contributeurs: Guilhem Desarcy-Lemiere, Thomas Del Gatto, Luca Desplat, Yanis Descazals
 
 //Définition des broches pour les moteurs (moteur1 gauche moteur2 droite)
-// Vitesse PWM en Digital, de 0 à 255
-int moteur1 = 12;
-int moteur2 = 13;
+// Vitesse PWM en Analog, de 0 à 255
+int moteur1 = A2;
+int moteur2 = A3;
 
 // Sens de rotation. IN1 et IN2 moteur gauche, IN3 et IN4 droite. Si IN1 HIGH IN2 LOW, Sens horaire. Si IN1 LOW IN2 HIGH, Sens antihoraire. Si IN3 HIGH IN4 LOW, Sens horaire. Si IN3 LOW IN4 HIGH, Sens antihoraire
-int IN1 = 4;
-int IN2 = 5;
-int IN3 = 6;
-int IN4 = 7;
+int IN1 = 1;
+int IN2 = 2;
+int IN3 = 3;
+int IN4 = 5;
 
 //Définition des broches pour les capteurs infrarouge, en ANALOG
 // regarder https://einstronic.com/product/infrared-line-tracking-sensor-module/ pour les capteurs
