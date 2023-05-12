@@ -2,6 +2,11 @@ int capteurGauche = A0; // capteur infrarouge gauche connecté à A0
 int capteurDroit = A1; // capteur infrarouge droit connecté à A1
 int seuil = 500; // seuil de détection de la ligne noire
 
+#include <Wire.h>
+#include <Adafruit_TCS34725.h>
+
+Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_700MS, TCS34725_GAIN_1X);
+
 void setup() {
   Serial.begin(9600); // initialisation de la communication série à 9600 bauds
 }
@@ -34,13 +39,6 @@ void loop() {
 // Connectez le fil rouge du capteur infrarouge gauche à la broche A0 de la carte Uno R3.
 // Connectez le fil noir du capteur infrarouge droit à la broche GND de la carte Uno R3.
 // Connectez le fil rouge du capteur infrarouge droit à la broche A1 de la carte Uno R3
-
-
-
-#include <Wire.h>
-#include <Adafruit_TCS34725.h>
-
-Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_700MS, TCS34725_GAIN_1X);
 
 void setup() {
   Serial.begin(9600);
