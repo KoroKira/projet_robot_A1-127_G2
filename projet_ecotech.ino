@@ -3,9 +3,9 @@
 //Contributeurs: Guilhem Desarcy-Lemiere, Thomas Del Gatto, Luca Desplat, Yanis Descazals
 
 //Définition des broches pour les moteurs (moteur1 gauche moteur2 droite)
-// Vitesse PWM en Analog, de 0 à 255
-int moteur1 = A2;
-int moteur2 = A3;
+// Vitesse PWM en Digital, de 0 à 255
+int moteur1 = 9;
+int moteur2 = 10;
 
 // Sens de rotation. IN1 et IN2 moteur gauche, IN3 et IN4 droite. Si IN1 HIGH IN2 LOW, Sens horaire. Si IN1 LOW IN2 HIGH, Sens antihoraire. Si IN3 HIGH IN4 LOW, Sens horaire. Si IN3 LOW IN4 HIGH, Sens antihoraire
 int IN1 = 1;
