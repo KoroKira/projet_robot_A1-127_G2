@@ -156,15 +156,15 @@ if (valeur_capteur_gauche < 500 && valeur_capteur_droit < 500) {
     avancer();
 }
   //Si seul le capteur gauche est sur une surface noire
-else if (valeur_capteur_gauche < 500 && valeur_capteur_droit > 500) {
+if (valeur_capteur_gauche < 500 && valeur_capteur_droit > 500) {
     avancer_gauche();
 }
   //Si seul le capteur droit est sur une surface noire
-else if (valeur_capteur_gauche > 500 && valeur_capteur_droit < 500) {
+if (valeur_capteur_gauche > 500 && valeur_capteur_droit < 500) {
     avancer_droite();
 }
   //Si les deux capteurs ne sont pas sur une surface noire
-else {
+if (valeur_capteur_gauche < 500 && valeur_capteur_droit < 500) {
     stopper();
 }
 
