@@ -33,7 +33,6 @@ void setup() {
   pinMode(motor2Pin1, OUTPUT);
   pinMode(motor2Pin2, OUTPUT);
 }
-}
 
 void loop() {
   int valeurGauche = analogRead(capteurGauche); // lecture de la valeur du capteur gauche
