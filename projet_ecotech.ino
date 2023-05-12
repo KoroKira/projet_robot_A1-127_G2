@@ -1,6 +1,6 @@
 //code du groupe 2 pour le projet ecotech
 //Mettez des commentaires bande de sacripans, c'est important pour que les gens qui repassent sur le code comprennent les changements faits et puissent être efficace après <3
-//Contributeurs: Guilhem Desarcy-Lemiere, Thomas Del Gatto, Luca Desplat, Kiara Vachet, Charlyne Bary (cablage essentiellement mais c'est déjà ça), Luca Fraissine et Méline Torrent
+//Contributeurs: Guilhem Desarcy-Lemiere, Thomas Del Gatto, Luca Desplat, Yanis Descazals
 
 //Définition des broches pour les moteurs (moteur1 gauche moteur2 droite)
 // Vitesse PWM en Digital, de 0 à 255
