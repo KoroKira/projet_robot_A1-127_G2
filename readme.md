@@ -12,3 +12,6 @@ Update du 17 avril: On va tester le code, et surtout implémenter les boutons ai
 
 
 21 Avril: notre Mega 2560 est dead, on va devoir passer sur la Uno R3. De gros changements dans le code sont prévus
+
+
+Update du 13 mai: Nous sommes sur la dernière ligne droite du robot, enfin, il fonctionne, le programme fonctionne, et il roule ! Ce que nous avons fait sur la programmation aujourd'hui: "J'ai commenté le code (du "project_ecotech.ino), il est bien plus compréhensible. Il faudrait qu'on se penche sur notre capteur couleur et vérifier la façon dont il récupère et interprète les datas de l'infrarouge, je ne sais plus s'il y arrive correctement donc c'est à vérifier."
