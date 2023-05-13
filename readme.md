@@ -15,3 +15,4 @@ Update du 17 avril: On va tester le code, et surtout implémenter les boutons ai
 
 
 Update du 13 mai: Nous sommes sur la dernière ligne droite du robot, enfin, il fonctionne, le programme fonctionne, et il roule ! Ce que nous avons fait sur la programmation aujourd'hui: "J'ai commenté le code (du "project_ecotech.ino), il est bien plus compréhensible. Il faudrait qu'on se penche sur notre capteur couleur et vérifier la façon dont il récupère et interprète les datas de l'infrarouge, je ne sais plus s'il y arrive correctement donc c'est à vérifier."
+Pour ce qu'il s'agit de notre capteur couleur, on va devoir se baser sur notre "capteur_couleur.ino", qui (normalement, si ma mémoire ne me joue pas des tours), fonctionnait parfaitement. Ainsi il faudra penser à bien mettre tout ce qui est librairie dans le projet, de sorte à ce que le robot puisse interpréter toute les datas du capteur
