@@ -29,10 +29,6 @@ int capteur_droit = A1;
 
 //Définition bouton marche
 int button_marche = 0;
-//Définition bouton ARU
-int button_ARU = 0;
-//Définition Relai
-int relai = 0;
 
 // Ici on a setup ces variables en =0, pour être sûr de leur état, cependant elles ne sont pas utiles étant donné que le relai n'est pas quelque chose manipulable par le code, et l'arrêt d'urgence de même
 // C'est pourquoi on les mettra en commentaire à postériori
@@ -70,7 +66,7 @@ void avancer_droite() {
   digitalWrite(IN3, LOW);
   digitalWrite(IN4, HIGH);
   analogWrite(moteur1, 200);
-  analogWrite(moteur2, 150);
+  analogWrite(moteur2, 0);
 }
 
 void avancer_gauche() {
@@ -79,7 +75,7 @@ void avancer_gauche() {
   digitalWrite(IN2, LOW);
   digitalWrite(IN3, LOW);
   digitalWrite(IN4, HIGH);
-  analogWrite(moteur1, 150);
+  analogWrite(moteur1, 0);
   analogWrite(moteur2, 200);
 }
 
