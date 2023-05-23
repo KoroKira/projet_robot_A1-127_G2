@@ -59,23 +59,23 @@ void guillotine();
 //Avec une puissance élevée, et un autre avec une puissance plus faible, de sorte à pouvoir avancer en mettant une rotation, donc sans tourner sur place. Afin de tourner sur place on mettrait plutôt les moteurs dans les 
 //Sens opposés, à la même puissance, ce qui changerait donc la façon dont on aura de suivre la ligne du parcours (il faut penser que l'on fait face à des angles droits, donc il faudra faire une séquence complète à chaque fois que le robot devra tourner
 //Ainsi, on pense plutôt, si le code en dessous ne convient pas pour aborder ces angles, passer par une détection de l'angle et de la direction vers laquelle il faut se tourner, puis ensuite faire une fonction adaptée à l'angle
-void avancer_droite() {
+void avancer_gauche() {
   // Instructions pour avancer à droite
-  digitalWrite(IN1, HIGH);
-  digitalWrite(IN2, LOW);
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, HIGH);
   digitalWrite(IN3, LOW);
   digitalWrite(IN4, HIGH);
   analogWrite(moteur1, 200);
-  analogWrite(moteur2, 0);
+  analogWrite(moteur2, 150);
 }
 
-void avancer_gauche() {
+void avancer_droite() {
   // Instructions pour avancer à gauche
   digitalWrite(IN1, HIGH);
   digitalWrite(IN2, LOW);
-  digitalWrite(IN3, LOW);
-  digitalWrite(IN4, HIGH);
-  analogWrite(moteur1, 0);
+  digitalWrite(IN3, HIGH);
+  digitalWrite(IN4, LOW);
+  analogWrite(moteur1, 150);
   analogWrite(moteur2, 200);
 }
 
