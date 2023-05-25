@@ -1,3 +1,6 @@
+//-Définition des variables de couleur-//
+float rouge, vert, bleu;
+
 void CapteurCouleur(float *rouge, float *vert, float *bleu){
   tcs.setInterrupt(false);  // turn on LED
   delay(60);  // takes 50ms to read
