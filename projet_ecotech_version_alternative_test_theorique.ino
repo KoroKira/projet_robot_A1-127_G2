@@ -24,7 +24,9 @@ int capteur_droit = A1;
 
 //Définition des broches pour les capteurs de couleur
 // Information sur le couleur: https://learn.adafruit.com/adafruit-color-sensors/library-reference pour le capteur
-// A FAIRE
+
+//-Définition des variables de couleur-//
+float rouge, vert, bleu;
 
 
 //Définition bouton marche
@@ -187,4 +189,27 @@ if (valeur_capteur_gauche > 100 && valeur_capteur_droit > 100) {
   // Détection d'obstacle. Il faudra ici changer les valeurs détectées dans couleur. En gros, le ==1 signifie que il faut que la variable couleur soit égale a la variable définie dans 1, donc ici il faudra définir 1 par le code rgb associé
   // Il faut donc se pencher sur quelle couleur = quel code rgb = quel obstacle. C'est pour cela que l'on a défini if couleur == A/B/C/D, et c'est dans ces variables que l'on définira notre couleur
   // Comment on va définir notre couleur ? Par un intervalle. On va chercher à capter un intervalle qui sera entre 2 valeurs distinctes de sorte à bien pouvoir capter la couleur que l'on cherche, et ainsi être sûr de ne pas rater d'obstacles
+}
+
+
+void CapteurCouleur(float *rouge, float *vert, float *bleu){
+  tcs.setInterrupt(false);  // turn on LED
+  delay(60);  // takes 50ms to read
+  tcs.getRGB(&*rouge, &*vert, &*bleu);
+  tcs.setInterrupt(true);  // turn off LED
+  /*
+  Serial.print("R:\t"); Serial.print(int(*rouge)); 
+  Serial.print("\tG:\t"); Serial.print(int(*vert)); 
+  Serial.print("\tB:\t"); Serial.print(int(*bleu));
+  */
+  }
+
+String Couleur(float rouge, float vert, float bleu) {
+  //Cette fonction renvoie la couleur perçue par le capteur de couleur d'aprèse des tests faits en aval
+  if (205 < rouge and rouge < 220 and 135 < vert and vert < 150 and 140 < bleu and bleu < 160 ) { return "rose"; }
+  else if (145 < rouge and rouge < 155 and 145 < vert and vert < 155 and 125 < bleu and bleu < 135 ) { return "vert"; }
+  else if (145 < rouge and rouge < 155 and 120 < vert and vert < 135 and 135 < bleu and bleu < 145 ) { return "bleu"; }
+  else if (190 < rouge and rouge < 205 and 175 < vert and vert < 190 and 80 < bleu and bleu < 95 ) { return "rouge"; }
+  else { return "Erreur"; }
+  
 }
