@@ -179,8 +179,8 @@ void setup()
   pinMode(IN2, OUTPUT);
   pinMode(IN3, OUTPUT);
   pinMode(IN4, OUTPUT);
-  pinMode(capteur_gauche, INPUT);
-  pinMode(capteur_droit, INPUT);
+  pinMode(capteur_gauche, INPUT_ANALOG);
+  pinMode(capteur_droit, INPUT_ANALOG);
   
 }
 
