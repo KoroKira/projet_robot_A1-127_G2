@@ -2,6 +2,12 @@
 //Mettez des commentaires bande de sacripans, c'est important pour que les gens qui repassent sur le code comprennent les changements faits et puissent être efficace après <3
 //Contributeurs: Guilhem Desarcy-Lemiere, Thomas Del Gatto, Luca Desplat, Yanis Descazals 
 
+
+#include <Wire.h>
+#include <Adafruit_TCS34725.h>
+
+Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_700MS, TCS34725_GAIN_1X);
+
 //Définition des broches pour les moteurs (moteur1 gauche moteur2 droite)
 // Vitesse PWM en Digital, de 0 à 255
 int moteur1 = 9;
@@ -25,8 +31,8 @@ int capteur_droit = A1;
 //Définition des broches pour les capteurs de couleur
 // Information sur le couleur: https://learn.adafruit.com/adafruit-color-sensors/library-reference pour le capteur
 
-int SCL = A4
-int SDA = A5
+int pin_SCL = A4;
+int pin_SDA = A5;
 
 //-Définition des variables de couleur-//
 float rouge, vert, bleu;
@@ -181,21 +187,21 @@ void setup()
 void loop()
 {  
   // Lecture du capteur de couleur
-  String couleurPerçue = Couleur(rouge, vert, bleu);
+  String couleurPercue = Couleur(rouge, vert, bleu);
   
-  if (couleurPerçue == "rose") {
+  if (couleurPercue == "rose") {
     balance(); // Appeler la fonction balance()
     }
-  else if (couleurPerçue == "vert") {
+  else if (couleurPercue == "vert") {
     mousse(); // Appeler la fonction mousse()
   }
-  else if (couleurPerçue == "rouge") {
+  else if (couleurPercue == "rouge") {
     guillotine(); // Appeler la fonction guillotine()
   }
-  else if (couleurPerçue == "bleu") {
+  else if (couleurPercue == "bleu") {
     escalier(); // Appeler la fonction escalier
   }
-  else (couleurPerçue == "Continuer") {
+  else (couleurPercue == "Continuer") {
     avancer(); // Avancer 
   }
   
