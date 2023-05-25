@@ -117,33 +117,40 @@ void continuer() {
 
 //Ces fonctions ici sont des fonctions situationnelles, elles dépendent de la situation auquel le robot fera face, et elle sera prête de sorte à ne pas avoir de problème pour passer l'obstacle qui se présente
 void balance() {
-  // Instructions pour passer la balance
-  // SE METTRE DROIT PAR RAPPORT À LA LIGNE
-  // ROULER DOUCEMENT (150-150)
-  // UNE FOIS X SECONDES PASSÉES DE ROULER DROIT, SE REMETTRE AU DESSUS DE LA LIGNE NOIRE BIEN DROITE
-  // RELANCER VOID AVANCER
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, HIGH);
+  analogWrite(moteur1, 200);
+  analogWrite(moteur2, 200);
 }
 
 void escalier() {
-  // Instructions pour passer les escaliers
-  // SE METTRE DROIT PAR RAPPORT A LA LIGNE
-  // ROULER DOUCEMENT PENDANT 3 SECONDES
-  // ALLER À FOND, POUR PASSER L'ESCALIER UNE FOIS QUE L'AVANT EST PASSÉ DESSUS
-  // UNE FOIS X TPS PASSÉ DESSUS POUR ETRE EN HAUT DE L'OBSTACLE
-  // LÉGÈREMENT AVANCER, SE STOPPER POUR ETRE INCLINÉ CORRECTEMENT SUR LA PENTE DERRIÈRE L'ESCALIER
-  // AVANCER ENSUITE POUR PASSER LA PENTE
-  // RELANCER VOID AVANCER
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, HIGH);
+  analogWrite(moteur1, 200);
+  analogWrite(moteur2, 200);
 }
 
 void mousse() {
-  // Instructions pour passer la mousse
-  // A AJOUTER
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, HIGH);
+  analogWrite(moteur1, 200);
+  analogWrite(moteur2, 200);
 }
 
 
 void guillotine() {
-  // Instructions pour passer la guillotine
-  // A AJOUTER
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, HIGH);
+  analogWrite(moteur1, 200);
+  analogWrite(moteur2, 200);
 }
 
 void CapteurCouleur(float *rouge, float *vert, float *bleu){
