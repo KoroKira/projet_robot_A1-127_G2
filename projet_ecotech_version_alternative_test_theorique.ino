@@ -171,6 +171,23 @@ void setup()
 void loop()
 {  
   // Lecture du capteur de couleur
+  String couleurPerçue = Couleur(rouge, vert, bleu);
+  
+  if (couleurPerçue == "rose") {
+    balance(); // Appeler la fonction balance()
+    }
+  else if (couleurPerçue == "vert") {
+    mousse(); // Appeler la fonction mousse()
+  }
+  else if (couleurPerçue == "rouge") {
+    guillotine(); // Appeler la fonction guillotine()
+  }
+  else if (couleurPerçue == "bleu") {
+    escalier(); // Appeler la fonction escalier
+  }
+  else (couleurPerçue == "Continuer") {
+    avancer(); // Avancer 
+  }
   
   
   String Couleur(float rouge, float vert, float bleu) {
@@ -179,7 +196,7 @@ void loop()
   else if (145 < rouge and rouge < 155 and 145 < vert and vert < 155 and 125 < bleu and bleu < 135 ) { return "vert"; }
   else if (145 < rouge and rouge < 155 and 120 < vert and vert < 135 and 135 < bleu and bleu < 145 ) { return "bleu"; }
   else if (190 < rouge and rouge < 205 and 175 < vert and vert < 190 and 80 < bleu and bleu < 95 ) { return "rouge"; }
-  else { return "Erreur"; }
+  else { return "Continuer"; }
   
 }
 
