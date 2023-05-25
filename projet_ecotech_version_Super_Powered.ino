@@ -25,7 +25,9 @@ int capteur_droit = A1;
 //Définition des broches pour les capteurs de couleur
 // Information sur le couleur: https://learn.adafruit.com/adafruit-color-sensors/library-reference pour le capteur
 
-int 
+int SCL = A4
+int SDA = A5
+
 //-Définition des variables de couleur-//
 float rouge, vert, bleu;
 
