@@ -201,7 +201,7 @@ void loop()
   else if (couleurPercue == "bleu") {
     escalier(); // Appeler la fonction escalier
   }
-  else (couleurPercue == "Continuer") {
+  else {
     avancer(); // Avancer 
   }
   
