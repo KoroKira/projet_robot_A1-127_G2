@@ -3,10 +3,10 @@
 //Contributeurs: Guilhem Desarcy-Lemiere, Thomas Del Gatto, Luca Desplat, Yanis Descazals 
 
 
-#include <Wire.h>
-#include <Adafruit_TCS34725.h>
+// #include <Wire.h>
+// #include <Adafruit_TCS34725.h>
 
-Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_700MS, TCS34725_GAIN_1X);
+// Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_700MS, TCS34725_GAIN_1X);
 
 
 //Définition des broches pour les moteurs (moteur1 gauche moteur2 droite)
@@ -32,11 +32,11 @@ int capteur_droit = A1;
 //Définition des broches pour les capteurs de couleur
 // Information sur le couleur: https://learn.adafruit.com/adafruit-color-sensors/library-reference pour le capteur
 
-int pin_SCL = A4;
-int pin_SDA = A5;
+// int pin_SCL = A4;
+// int pin_SDA = A5;
 
 //-Définition des variables de couleur-//
-float rouge, vert, bleu;
+// float rouge, vert, bleu;
 
 
 //Définition bouton marche
@@ -160,11 +160,11 @@ void guillotine() {
   analogWrite(moteur2, 200);
 }
 
-void CapteurCouleur(float *rouge, float *vert, float *bleu){
-  tcs.setInterrupt(false);  // turn on LED
-  delay(60);  // takes 50ms to read
-  tcs.getRGB(&*rouge, &*vert, &*bleu);
-  tcs.setInterrupt(true);  // turn off LED
+// void CapteurCouleur(float *rouge, float *vert, float *bleu){
+  // tcs.setInterrupt(false);  // turn on LED
+  // delay(60);  // takes 50ms to read
+  // tcs.getRGB(&*rouge, &*vert, &*bleu);
+  // tcs.setInterrupt(true);  // turn off LED
   /*
   Serial.print("R:\t"); Serial.print(int(*rouge)); 
   Serial.print("\tG:\t"); Serial.print(int(*vert)); 
@@ -188,32 +188,32 @@ void setup()
 void loop()
 {  
   // Lecture du capteur de couleur
-  String couleurPercue = Couleur(rouge, vert, bleu);
+  // String couleurPercue = Couleur(rouge, vert, bleu);
   
-  if (couleurPercue == "rose") {
-    balance(); // Appeler la fonction balance()
-    }
-  else if (couleurPercue == "vert") {
-    mousse(); // Appeler la fonction mousse()
-  }
-  else if (couleurPercue == "rouge") {
-    guillotine(); // Appeler la fonction guillotine()
-  }
-  else if (couleurPercue == "bleu") {
-    escalier(); // Appeler la fonction escalier
-  }
-  else {
-    avancer(); // Avancer 
-  }
+  // if (couleurPercue == "rose") {
+    // balance(); // Appeler la fonction balance()
+   // }
+  //else if (couleurPercue == "vert") {
+    //mousse(); // Appeler la fonction mousse()
+  //}
+  //else if (couleurPercue == "rouge") {
+    //guillotine(); // Appeler la fonction guillotine()
+  //}
+  //else if (couleurPercue == "bleu") {
+    //escalier(); // Appeler la fonction escalier
+  //}
+  //else {
+    //avancer(); // Avancer 
+  //}
   
   
-  String Couleur(float rouge, float vert, float bleu) {
+  //String Couleur(float rouge, float vert, float bleu) {
   //Cette fonction renvoie la couleur perçue par le capteur de couleur d'aprèse des tests faits en aval
-  if (205 < rouge and rouge < 220 and 135 < vert and vert < 150 and 140 < bleu and bleu < 160 ) { return "rose"; }
-  else if (145 < rouge and rouge < 155 and 145 < vert and vert < 155 and 125 < bleu and bleu < 135 ) { return "vert"; }
-  else if (145 < rouge and rouge < 155 and 120 < vert and vert < 135 and 135 < bleu and bleu < 145 ) { return "bleu"; }
-  else if (190 < rouge and rouge < 205 and 175 < vert and vert < 190 and 80 < bleu and bleu < 95 ) { return "rouge"; }
-  else { return "Continuer"; }
+  //if (205 < rouge and rouge < 220 and 135 < vert and vert < 150 and 140 < bleu and bleu < 160 ) { return "rose"; }
+  //else if (145 < rouge and rouge < 155 and 145 < vert and vert < 155 and 125 < bleu and bleu < 135 ) { return "vert"; }
+  //else if (145 < rouge and rouge < 155 and 120 < vert and vert < 135 and 135 < bleu and bleu < 145 ) { return "bleu"; }
+  //else if (190 < rouge and rouge < 205 and 175 < vert and vert < 190 and 80 < bleu and bleu < 95 ) { return "rouge"; }
+  //else { return "Continuer"; }
   
 }
 
